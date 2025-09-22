@@ -1,5 +1,17 @@
 @charset "UTF-8";
 
+:root {
+  --fundo-principal: #F8F9FA; /* Um branco acinzentado, ideal para o fundo do site. */
+  --fundo-card: #FFFFFF; /* Um branco puro para cartões e elementos que precisam de mais destaque. */
+  --texto-principal: #212529; /* Um preto suave, excelente para títulos e textos longos. */
+  --texto-secundario: #6C757D; /* Um cinza para textos secundários e detalhes. */
+  --texto-inverso: #FFFFFF; /* Branco para usar sobre fundos escuros, como botões. */
+  --destaque-principal: #007BFF; /* O azul vibrante da sua logo. */
+  --destaque-secundario: #0056B3; /* O azul mais escuro, ótimo para estados de hover. */
+  --destaque-sucesso: #28A745; /* Verde para sucesso, como formulários enviados. */
+  --destaque-erro: #DC3545; /* Vermelho para erro, como mensagens de alerta. */
+}
+
 *{
     margin: 0px;
     padding: 0px;
