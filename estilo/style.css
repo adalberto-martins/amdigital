@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+/* Typical Device Breakpoints
+------------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
 :root {
   --fundo-principal: #F8F9FA; /* Um branco acinzentado, ideal para o fundo do site. */
   --fundo-card: #FFFFFF; /* Um branco puro para cartões e elementos que precisam de mais destaque. */
