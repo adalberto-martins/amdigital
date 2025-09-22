@@ -12,7 +12,7 @@
   --destaque-erro: #DC3545; /* Vermelho para erro, como mensagens de alerta. */
 }
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -30,4 +30,15 @@ main > h1 {
     margin-top: 200px;
     font-size: 8em;
     text-align: center;
+    color: var(--texto-secundario);
+}
+
+@media screen and (max-width: 768px) {
+
+    main > h1 {
+        margin-top: 100px;
+        font-size: 6em;
+        text-align: center;
+    }
+    
 }
