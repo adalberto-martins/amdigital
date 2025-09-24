@@ -30,7 +30,7 @@ Grandes telas: acima de 1200px
 }
 
 body {
-    font-family:var(--fonte);
+    font-family: var(--fonte);
 }
 
 main {
@@ -41,19 +41,124 @@ main {
    background-size: contain;
 }
 
-main > h1 {
+main > section > h1 {
     margin-top: 200px;
     font-size: 8em;
     text-align: center;
     color: var(--texto-secundario);
 }
 
+header {
+    display: grid;
+    /* Define as áreas nomeadas do grid */
+    grid-template-areas:
+        "logo titulo menu"
+        "logo subtitulo menu";
+    /* Alinha os itens na vertical ao centro */
+    align-items: center; 
+    /* Adiciona um espaçamento entre as colunas */
+    gap: 10px;
+    background-color: var(--fundo-card); 
+    color: var(--texto-principal);   
+}
+
+header img {
+    /* Atribui a imagem à área "logo" */
+    grid-area: logo;
+    justify-self: center; /* Centraliza a logo horizontalmente */
+    margin-left: -150px;
+}
+
+header h1 {
+    /* Atribui o h1 à área "titulo" */
+    grid-area: titulo;
+    margin-left: -150px;
+}
+
+header p {
+    /* Atribui o parágrafo à área "subtitulo" */
+    grid-area: subtitulo;
+    margin-top: -150px;
+    margin-left: -150px;
+}
+
+header nav {
+    /* Atribui a navegação à área "menu" */
+    grid-area: menu;
+    justify-self: end; /* Alinha o menu à direita */
+    margin-right: 50px;
+}
+
+header ul {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Transforma a lista em um flex container para organizar os itens horizontalmente */
+    gap: 18px;
+    padding: 0; /* Remove o padding padrão da lista */
+}
+
+header li {
+    font-size: 1.5em;
+    
+    
+}
+
+header li:hover {
+    background-color: var(--destaque-principal);
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+i#burguer {
+    display: none;
+}
+
+nav {
+    display: block;
+}
+
+nav > ul > li {
+    display: inline-block;
+}
+
+
 @media screen and (max-width: 768px) {
 
-    main > h1 {
+    main > section > h1 {
         margin-top: 100px;
         font-size: 3em;
         text-align: center;
     }
     
+    header {
+        grid-template-areas:
+            "logo titulo"
+            "logo subtitulo"
+            "menu menu";
+        gap: 5px;
+        text-align: center;
+    }
+
+    header nav {
+        justify-self: center; /* Centraliza o menu em telas menores */
+        margin-top: 10px;
+    }
+
+    i#burguer {
+        color: var(--texto-principal);
+        display: block;
+        text-align: center;
+        padding: 5px;
+        cursor: pointer;    
+    }
+
+    i#burguer:hover {
+        background-color: var(--destaque-principal);
+        color: var(--texto-principal);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    
 }
+    
