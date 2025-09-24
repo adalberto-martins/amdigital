@@ -23,6 +23,18 @@ Grandes telas: acima de 1200px
   --fonte:  font-family: "Montserrat", sans-serif;
 }
 
+body.dark-mode {
+  --fundo-principal: #121212; /* Fundo bem escuro */
+  --fundo-card: #1E1E1E; /* Cor para cartões e containers */
+  --texto-principal: #E0E0E0; /* Texto claro para contraste */
+  --texto-secundario: #A0A0A0; /* Cinza claro para textos secundários */
+  --texto-inverso: #000000; /* Preto para usar sobre fundos claros, se houver */
+  --destaque-principal: #00A6FF; /* Versão mais clara do azul para destaque */
+  --destaque-secundario: #0070B3; /* Azul para hover */
+  --destaque-sucesso: #4CAF50; /* Verde de sucesso */
+  --destaque-erro: #F44336; /* Vermelho de erro */
+}
+
 * {
     margin: 0px;
     padding: 0px;
