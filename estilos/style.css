@@ -133,7 +133,8 @@ i#burguer {
 }
 
 nav {
-    display: flex;
+    display: block;
+    margin:auto;
 }
 
 nav > ul > li {
@@ -160,12 +161,13 @@ nav > ul > li {
 
     header nav {
         justify-self: center; /* Centraliza o menu em telas menores */
-        margin-top: 10px;
+        margin: auto;
     }
 
     i#burguer {
         color: var(--texto-principal);
         display: block;
+        
         text-align: center;
         padding: 5px;
         cursor: pointer;    
