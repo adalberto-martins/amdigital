@@ -79,7 +79,7 @@ header img {
     grid-area: logo;
     justify-self: center; /* Centraliza a logo horizontalmente */
     border-radius: 5px;
-    width: 30%;
+    width: 40%;
     max-width: 150px;
     height: auto;
     
@@ -95,7 +95,7 @@ header h1 {
 header p {
     /* Atribui o parágrafo à área "subtitulo" */
     grid-area: subtitulo;
-
+    margin-top: -5px;
 }
 
 header nav {
