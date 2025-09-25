@@ -23,7 +23,7 @@ Grandes telas: acima de 1200px
   --fonte:  font-family: "Montserrat", sans-serif;
 }
 
-body.dark-mode {
+body.escuro {
   --fundo-principal: #121212; /* Fundo bem escuro */
   --fundo-card: #1E1E1E; /* Cor para cartões e containers */
   --texto-principal: #E0E0E0; /* Texto claro para contraste */
@@ -70,7 +70,7 @@ header {
     align-items: center; 
     /* Adiciona um espaçamento entre as colunas */
     gap: 10px;
-    background-color: var(--fundo-card); 
+    background-color: var(--fundo-principal); 
     color: var(--texto-principal);   
 }
 
@@ -78,20 +78,22 @@ header img {
     /* Atribui a imagem à área "logo" */
     grid-area: logo;
     justify-self: center; /* Centraliza a logo horizontalmente */
-    margin-left: -150px;
+    border-radius: 5px;
+    width: 85%;
+    height: 85%;
+   
 }
 
 header h1 {
     /* Atribui o h1 à área "titulo" */
     grid-area: titulo;
-    margin-left: -150px;
+  
 }
 
 header p {
     /* Atribui o parágrafo à área "subtitulo" */
     grid-area: subtitulo;
-    margin-top: -150px;
-    margin-left: -150px;
+
 }
 
 header nav {
@@ -108,10 +110,13 @@ header ul {
     padding: 0; /* Remove o padding padrão da lista */
 }
 
+header nav ul li a {
+    text-decoration: none;
+    color: var(--texto-principal);
+}
+
 header li {
-    font-size: 1.5em;
-    
-    
+    font-size: 1.5em;    
 }
 
 header li:hover {
@@ -126,7 +131,7 @@ i#burguer {
 }
 
 nav {
-    display: block;
+    display: flex;
 }
 
 nav > ul > li {
