@@ -79,8 +79,10 @@ header img {
     grid-area: logo;
     justify-self: center; /* Centraliza a logo horizontalmente */
     border-radius: 5px;
-    width: 85%;
-    height: 85%;
+    width: 30%;
+    max-width: 150px;
+    height: auto;
+    
    
 }
 
