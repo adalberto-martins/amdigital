@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AM Digital</title>
+    <link rel="shortcut icon" href="../imagens/favicon1.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/e2c5db69a2.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <link rel="stylesheet" href="estilos/style.css?v=2.2">
+    <link rel="stylesheet" href="../estilos/contato.css">    
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <img src="../imagens/logo amdigital 200x200.jpg" alt="logo-amdigital">
+        <h1><strong>AM</strong>Digital</h1>
+        <p>Desemvolvimento de Qualidade</p>
+        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
+        <nav id="menu">
+            <ul>                
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Portifolio</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#" class="link" id="botao-tema"><i class="fa-solid fa-moon"></i></a></li>
+            </ul>
+        </nav>    
+    </header>
+    <main>
+        <section id="contato">
+            <form action="contato.php" method="post" class="contao">
+                <p>
+                    <label for="inome">Nome:</label>
+                    <input type="text" name="nome" id="inome">
+                </p>
+                <p>
+                    <label for="iemail">Email:</label>
+                    <input type="email" name="email" id="iemail">
+                </p>
+                <p>
+                    <label for="itel">Telefone:</label>
+                    <input type="tel" name="tel" id="itel">
+                </p>
+                <p>
+                    <label for="iass">Assunto:</label>
+                    <textarea name="ass" id="iass"></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </p>
+            </form>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                menu.style.display = 'block'
+            } else {
+                menu.style.display = 'none'
+            }
+        }
+
+        function clickMenu() {
+            if (menu.style.display == 'block') {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = 'block'
+            }
+        }
+    </script>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
