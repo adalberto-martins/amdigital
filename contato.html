@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
-    <link rel="stylesheet" href="estilos/style.css?v=2.2">
     <link rel="stylesheet" href="../estilos/contato.css">    
 </head>
 <body onresize="mudouTamanho()">
@@ -30,28 +29,30 @@
     </header>
     <main>
         <section id="contato">
-            <form action="contato.php" method="post" class="contao">
-                <p>
-                    <label for="inome">Nome:</label>
-                    <input type="text" name="nome" id="inome">
-                </p>
-                <p>
-                    <label for="iemail">Email:</label>
-                    <input type="email" name="email" id="iemail">
-                </p>
-                <p>
-                    <label for="itel">Telefone:</label>
-                    <input type="tel" name="tel" id="itel">
-                </p>
-                <p>
-                    <label for="iass">Assunto:</label>
-                    <textarea name="ass" id="iass"></textarea>
-                </p>
-                <p>
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Limpar">
-                </p>
-            </form>
+            <article>
+                <form action="contato.php" method="post">
+                    <p>
+                        <label for="inome">Nome:</label>
+                        <input type="text" name="nome" id="inome">
+                    </p>
+                    <p>
+                        <label for="iemail">Email:</label>
+                        <input type="email" name="email" id="iemail">
+                    </p>
+                    <p>
+                        <label for="itel">Telefone:</label>
+                        <input type="tel" name="tel" id="itel">
+                    </p>
+                    <p>
+                        <label for="iass">Assunto:</label>
+                        <textarea name="ass" id="iass"></textarea>
+                    </p>
+                    <p class="botao">
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpar">
+                    </p>
+                </form>
+            </article>
         </section>
     </main>
     <footer>
