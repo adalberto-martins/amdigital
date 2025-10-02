@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
-    <link rel="stylesheet" href="../estilos/contato.css">    
+    <link rel="stylesheet" href="../estilos/contato.css?v=1.0">    
 </head>
 <body onresize="mudouTamanho()">
     <header>
@@ -19,10 +19,10 @@
         <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
         <nav id="menu">
             <ul>                
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#">Serviços</a></li>
                 <li><a href="#">Portifolio</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="contato.html">Contato</a></li>
                 <li><a href="#" class="link" id="botao-tema"><i class="fa-solid fa-moon"></i></a></li>
             </ul>
         </nav>    
@@ -31,26 +31,29 @@
         <section id="contato">
             <article>
                 <form action="contato.php" method="post">
-                    <p>
-                        <label for="inome">Nome:</label>
-                        <input type="text" name="nome" id="inome">
-                    </p>
-                    <p>
-                        <label for="iemail">Email:</label>
-                        <input type="email" name="email" id="iemail">
-                    </p>
-                    <p>
-                        <label for="itel">Telefone:</label>
-                        <input type="tel" name="tel" id="itel">
-                    </p>
-                    <p>
-                        <label for="iass">Assunto:</label>
-                        <textarea name="ass" id="iass"></textarea>
-                    </p>
-                    <p class="botao">
-                        <input type="submit" value="Enviar">
-                        <input type="reset" value="Limpar">
-                    </p>
+                    <fieldset>
+                        <legend>Deixe seu Contato</legend>
+                        <p>
+                            <label for="inome" >Nome:</label>
+                            <input type="text" name="nome" id="inome" placeholder="Digite Seu Nome">
+                        </p>
+                        <p>
+                            <label for="iemail">E-mail:</label>
+                            <input type="email" name="email" id="iemail" placeholder="Digite seu E-mail">
+                        </p>
+                        <p>
+                            <label for="itel">Telefone:</label>
+                            <input type="tel" name="tel" id="itel" placeholder="Digite seu Telefone">
+                        </p>
+                        <p>
+                            <label for="iass">Assunto:</label>
+                            <textarea name="ass" id="iass" placeholder="Digite aqui...."></textarea>
+                        </p>
+                        <p class="botao">
+                            <input type="submit" value="Enviar">
+                            <input type="reset" value="Limpar">
+                        </p>
+                    </fieldset>
                 </form>
             </article>
         </section>
