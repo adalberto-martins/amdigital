@@ -19,6 +19,8 @@ Grandes telas: acima de 1200px
   --destaque-secundario: #0056B3; /* O azul mais escuro, ótimo para estados de hover. */
   --destaque-sucesso: #28A745; /* Verde para sucesso, como formulários enviados. */
   --destaque-erro: #DC3545; /* Vermelho para erro, como mensagens de alerta. */
+  --box-shadow: #00000013;
+  --sombra: 
 
   --fonte:  font-family: "Montserrat", sans-serif;
 }
@@ -33,6 +35,7 @@ body.escuro {
   --destaque-secundario: #0070B3; /* Azul para hover */
   --destaque-sucesso: #4CAF50; /* Verde de sucesso */
   --destaque-erro: #F44336; /* Vermelho de erro */
+  --box-shadow: rgba(255, 255, 255, 0.789);
 }
 
 * {
@@ -142,8 +145,8 @@ article {
 }
 
 fieldset {
-  border: 2px solid var(--destaque-principal);
-  box-shadow: 5px 5px 4px var(--destaque-principal);
+  border: 2px solid var(--texto-principal);
+  box-shadow: 5px 5px 4px #00000013;
   padding: 15px;
   margin-top: 20px;
   border-radius: 8px;
@@ -180,6 +183,10 @@ label {
   font-size: 1.1em;
 }
 
+legend {
+  color: var(--texto-principal);
+}
+
 #contato input[type="text"], input[type="email"], input[type="tel"], textarea {
   width: 100%;
   padding: 10px;
@@ -200,8 +207,8 @@ label {
 
 input[type="submit"] {
   width: 200px;
-  background-color: var(--destaque-secundario); /* Cor laranja vibrante */
-  color: var(--texto-inverso);
+  background-color: var(--destaque-secundario); 
+  color: var(--texto-principal);
   font-weight: bold;
   cursor: pointer;
   border: none;
@@ -218,8 +225,8 @@ input[type="submit"]:hover {
 
 input[type="reset"] {
   width: 200px;
-  background-color: var(--destaque-secundario); /* Cor laranja vibrante */
-  color: var(--texto-inverso);
+  background-color: var(--destaque-secundario); 
+  color: var(--texto-principal);
   font-weight: bold;
   cursor: pointer;
   border: none;
