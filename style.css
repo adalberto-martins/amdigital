@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+/* Typical Device Breakpoints
+------------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+:root {
+  --fundo-principal: #F8F9FA; /* Um branco acinzentado, ideal para o fundo do site. */
+  --fundo-card: #FFFFFF; /* Um branco puro para cartões e elementos que precisam de mais destaque. */
+  --texto-principal: #212529; /* Um preto suave, excelente para títulos e textos longos. */
+  --texto-secundario: #6C757D; /* Um cinza para textos secundários e detalhes. */
+  --texto-inverso: #FFFFFF; /* Branco para usar sobre fundos escuros, como botões. */
+  --destaque-principal: #007BFF; /* O azul vibrante da sua logo. */
+  --destaque-secundario: #0056B3; /* O azul mais escuro, ótimo para estados de hover. */
+  --destaque-sucesso: #28A745; /* Verde para sucesso, como formulários enviados. */
+  --destaque-erro: #DC3545; /* Vermelho para erro, como mensagens de alerta. */
+
+  --fonte:  font-family: "Montserrat", sans-serif;
+}
+
+body.escuro {
+  --fundo-principal: #121212; /* Fundo bem escuro */
+  --fundo-card: #1E1E1E; /* Cor para cartões e containers */
+  --texto-principal: #E0E0E0; /* Texto claro para contraste */
+  --texto-secundario: #A0A0A0; /* Cinza claro para textos secundários */
+  --texto-inverso: #000000; /* Preto para usar sobre fundos claros, se houver */
+  --destaque-principal: #00A6FF; /* Versão mais clara do azul para destaque */
+  --destaque-secundario: #0070B3; /* Azul para hover */
+  --destaque-sucesso: #4CAF50; /* Verde de sucesso */
+  --destaque-erro: #F44336; /* Vermelho de erro */
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte);
+}
+
+main {
+   background-image: url('../imagens/logo amdigital_cor1.png');
+   min-height: 100vh;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+}
+
+main > section > h1 {
+    margin-top: 200px;
+    font-size: 8em;
+    text-align: center;
+    color: var(--texto-secundario);
+}
+
+header {
+    display: grid;
+    /* Define as áreas nomeadas do grid */
+    grid-template-areas:
+        "logo titulo menu"
+        "logo subtitulo menu";
+    /* Alinha os itens na vertical ao centro */
+    align-items: center; 
+    /* Adiciona um espaçamento entre as colunas */
+    gap: 10px;
+    background-color: var(--fundo-principal); 
+    color: var(--texto-principal);   
+}
+
+header img {
+    /* Atribui a imagem à área "logo" */
+    grid-area: logo;
+    justify-self: center; /* Centraliza a logo horizontalmente */
+    border-radius: 5px;
+    width: 40%;
+    max-width: 150px;
+    height: auto;
+    
+   
+}
+
+header h1 {
+    /* Atribui o h1 à área "titulo" */
+    grid-area: titulo;
+  
+}
+
+header p {
+    /* Atribui o parágrafo à área "subtitulo" */
+    grid-area: subtitulo;
+    margin-top: -5px;
+}
+
+header nav {
+    /* Atribui a navegação à área "menu" */
+    grid-area: menu;
+    justify-self: end; /* Alinha o menu à direita */
+    margin-right: 50px;
+}
+
+header ul {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Transforma a lista em um flex container para organizar os itens horizontalmente */
+    gap: 18px;
+    padding: 0; /* Remove o padding padrão da lista */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--texto-principal);
+}
+
+header li {
+    font-size: 1.5em;    
+}
+
+header li:hover {
+    background-color: var(--destaque-principal);
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+i#burguer {
+    display: none;
+}
+
+nav {
+    display: flex;
+}
+
+nav > ul > li {
+    display: inline-block;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    main > section > h1 {
+        margin-top: 100px;
+        font-size: 3em;
+        text-align: center;
+    }
+    
+    header {
+        grid-template-areas:
+            "logo titulo"
+            "logo subtitulo"
+            "menu menu";
+        gap: 5px;
+        text-align: center;
+    }
+
+    header nav {
+        justify-self: center; /* Centraliza o menu em telas menores */
+        margin-top: 10px;
+    }
+
+    i#burguer {
+        color: var(--texto-principal);
+        display: block;
+        text-align: center;
+        padding: 5px;
+        cursor: pointer;    
+    }
+
+    i#burguer:hover {
+        background-color: var(--destaque-principal);
+        color: var(--texto-principal);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    
+}
+    
