@@ -1,8 +1,8 @@
 <?php
 
 // Importa as classes do PHPMailer no namespace global
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer;
+use PHPMailer\Exception;
 
 // -----------------------------------------------------------------------------------
 // IMPORTANTE:
