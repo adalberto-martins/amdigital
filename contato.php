@@ -10,11 +10,11 @@ use PHPMailer\PHPMailer\Exception;
 // 2. Colocar os arquivos .php nas pastas abaixo no seu servidor.
 // 3. Altere o 'caminho/para/' para o local correto onde você fez o upload.
 // -----------------------------------------------------------------------------------
-define ('ROOT','C:/xampp/htdocs/cursophp/amdigital');
 
-require ROOT. 'PHPMailer/src/Exception.php';
-require ROOT. 'PHPMailer/src/PHPMailer.php';
-require ROOT. 'PHPMailer/src/SMTP.php';
+
+require __DIR__ .'PHPMailer/Exception.php';
+require __DIR__.'PHPMailer/PHPMailer.php';
+require __DIR__. 'PHPMailer/SMTP.php';
 
 
 // Verifica se a requisição foi feita usando o método POST
