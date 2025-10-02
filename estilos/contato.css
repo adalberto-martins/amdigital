@@ -1,89 +1,137 @@
-@charset "utf-8";
+@charset "UTF-8";
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Typical Device Breakpoints
+------------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
 
 :root {
-  --fundo-principal: #f0f2f5;
-  --fundo-card: #ffffff;
-  --texto-principal: #1f2937;
-  --texto-secundario: #6b7280;
-  --texto-inverso: #ffffff;
-  --destaque-principal: #4f2d7f;
-  --destaque-secundario: #ff5722;
-  --destaque-sucesso: #10b981;
-  --destaque-erro: #ef4444;
+  --fundo-principal: #F8F9FA; /* Um branco acinzentado, ideal para o fundo do site. */
+  --fundo-card: #FFFFFF; /* Um branco puro para cartões e elementos que precisam de mais destaque. */
+  --texto-principal: #212529; /* Um preto suave, excelente para títulos e textos longos. */
+  --texto-secundario: #6C757D; /* Um cinza para textos secundários e detalhes. */
+  --texto-inverso: #FFFFFF; /* Branco para usar sobre fundos escuros, como botões. */
+  --destaque-principal: #007BFF; /* O azul vibrante da sua logo. */
+  --destaque-secundario: #0056B3; /* O azul mais escuro, ótimo para estados de hover. */
+  --destaque-sucesso: #28A745; /* Verde para sucesso, como formulários enviados. */
+  --destaque-erro: #DC3545; /* Vermelho para erro, como mensagens de alerta. */
+
+  --fonte:  font-family: "Montserrat", sans-serif;
 }
 
 body.escuro {
-  --fundo-principal: #1f2937; 
-  --fundo-card: #323d4c; 
-  --texto-principal: #e0e0e0; 
-  --texto-secundario: #a7b0bd; 
-  --texto-inverso: #ffffff;  
-  --destaque-principal: #ff5722; 
-  --destaque-secundario: #4f2d7f; 
-  --destaque-sucesso: #10b981; 
-  --destaque-erro: #ef4444;
+  --fundo-principal: #121212; /* Fundo bem escuro */
+  --fundo-card: #1E1E1E; /* Cor para cartões e containers */
+  --texto-principal: #E0E0E0; /* Texto claro para contraste */
+  --texto-secundario: #A0A0A0; /* Cinza claro para textos secundários */
+  --texto-inverso: #000000; /* Preto para usar sobre fundos claros, se houver */
+  --destaque-principal: #00A6FF; /* Versão mais clara do azul para destaque */
+  --destaque-secundario: #0070B3; /* Azul para hover */
+  --destaque-sucesso: #4CAF50; /* Verde de sucesso */
+  --destaque-erro: #F44336; /* Vermelho de erro */
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--fundo-principal);
-  color: var(--texto-principal);
-  margin: 0px;
+    font-family: var(--fonte);
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--destaque-principal);
-  color: var(--texto-inverso);
-  padding: 10px;
-  position: sticky;
+    display: grid;
+    /* Define as áreas nomeadas do grid */
+    grid-template-areas:
+        "logo titulo menu"
+        "logo subtitulo menu";
+    /* Alinha os itens na vertical ao centro */
+    align-items: center; 
+    /* Adiciona um espaçamento entre as colunas */
+    gap: 10px;
+    background-color: var(--fundo-principal); 
+    color: var(--texto-principal);
+    margin-bottom: 10px;   
+}
+
+header img {
+    /* Atribui a imagem à área "logo" */
+    grid-area: logo;
+    justify-self: center; /* Centraliza a logo horizontalmente */
+    border-radius: 5px;
+    width: 40%;
+    max-width: 150px;
+    height: auto;
+    
+   
+}
+
+header h1 {
+    /* Atribui o h1 à área "titulo" */
+    grid-area: titulo;
   
 }
 
-header > img {
-  width: 30%;
-  max-width: 150px;
-  height: auto;
-  align-self: center;
+header p {
+    /* Atribui o parágrafo à área "subtitulo" */
+    grid-area: subtitulo;
+    margin-top: -5px;
 }
 
-nav#menu {
-  color: var(--texto-inverso);
+header nav {
+    /* Atribui a navegação à área "menu" */
+    grid-area: menu;
+    justify-self: end; /* Alinha o menu à direita */
+    margin-right: 50px;
 }
 
-nav#menu ul {
-  list-style-type: none;
-  display: flex;
-  gap: 10px;
+header ul {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Transforma a lista em um flex container para organizar os itens horizontalmente */
+    gap: 18px;
+    padding: 0; /* Remove o padding padrão da lista */
 }
 
-nav#menu a {
-  text-decoration: none;
-  color: var(--texto-inverso);
-  font-weight: bold;
-  padding: 12px 15px;
-  border-radius: 5px;
-  transition: background-color 0.5s, color 0.5s;    
+header nav ul li a {
+    text-decoration: none;
+    color: var(--texto-principal);
 }
 
-nav#menu a:hover {
-  background-color: var(--destaque-secundario);
-  color: var(--texto-inverso);
+header li {
+    font-size: 1.5em;    
 }
 
-section {
-    background-color: var(--fundo-principal);
-    margin-top: 10px;
+header li:hover {
+    background-color: var(--destaque-principal);
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
 }
 
+i#burguer {
+    display: none;
+}
+
+nav {
+    display: block;
+    margin:auto;
+}
+
+nav > ul > li {
+    display: inline-block;
+}
+
+section #contato {
+  margin-top: 20px;
+  padding-top: 100px;
+  border: 1px solid black;
+}
 
 article {
     background-color: var(--fundo-card);
@@ -96,24 +144,27 @@ article {
 p {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    padding: 6px;
 }
 
-p .botao {
+.botao {
     display: flex;
+    justify-content: center;
     flex-direction: row;
+    gap: 5px;
 
 }
 
 label {
-    margin-left: 10px;
-    font-weight: bold;
-    color: var(--texto-principal);
-    margin-bottom: 5px;
-    font-size: 0.9em;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+  color: var(--texto-principal);
+  font-size: 0.9em;
 }
 
-#contato input, textarea {
+#contato input[type="text"], input[type="email"], input[type="tel"], textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid var(--texto-secundario);
@@ -125,14 +176,14 @@ label {
   transition: all 0.3s ease;
 }
 
-#contato input:focus, textarea:focus {
+#contato input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
   outline: none;
   border-color: var(--destaque-principal);
   box-shadow: 0 0 0 3px rgba(79, 45, 127, 0,2);
 }
 
 input[type="submit"] {
-  width: 50px;
+  width: 200px;
   background-color: var(--destaque-secundario); /* Cor laranja vibrante */
   color: var(--texto-inverso);
   font-weight: bold;
@@ -149,8 +200,26 @@ input[type="submit"]:hover {
     transform: translateY(-2px); /* Efeito sutil de elevação */
 }
 
+input[type="reset"] {
+  width: 200px;
+  background-color: var(--destaque-secundario); /* Cor laranja vibrante */
+  color: var(--texto-inverso);
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="reset"]:hover {
+    background-color: var(--destaque-principal); /* Mudar para a cor roxa ao passar o mouse */
+    transform: translateY(-2px); /* Efeito sutil de elevação */
+}
+
 footer {
-  background-color: var(--destaque-principal);
+  background-color: var(--fundo-principal);
   color: var(--texto-inverso);
   text-align: center;
   padding: 15px;
