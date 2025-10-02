@@ -141,6 +141,23 @@ nav > ul > li {
     display: inline-block;
 }
 
+footer {
+  background-color: var(--fundo-principal);
+  color: var(--texto-inverso);
+  text-align: center;
+  padding: 15px;
+}
+
+footer a {
+  color: var(--texto-inverso);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: var(--destaque-secundario);
+}
+
 
 
 @media screen and (max-width: 768px) {
